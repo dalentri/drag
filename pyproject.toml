@@ -4,4 +4,12 @@ version = "0.1.0"
 description = "An Evaluated RAG Document Search API written in Python."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.143.1",
+    "llama-index>=0.14.25",
+    "psycopg2-binary>=2.9.13",
+    "pydantic-settings>=2.16.0",
+    "pytest>=9.1.1",
+    "ragas>=0.4.3",
+    "uvicorn>=0.54.0",
+]
