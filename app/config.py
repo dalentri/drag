@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     username: str
     table_name: str
     embed_dim: int
+    llm_provider: str
+    model: str
+    openai_api_key: str
 
     model_config = SettingsConfigDict(
         env_file=".env", env_file_encoding="utf-8", extra="ignore"

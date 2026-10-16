@@ -1,10 +1,10 @@
-from fastapi import FastAPI
 from app.models.schemas import Query
 from app.services.rag import generate_answer
+from fastapi import APIRouter
 
-app = FastAPI()
+router = APIRouter()
 
 
-@app.post("/api/v1/query")
+@router.post("/api/v1/query")
 def generate_response(query: Query):
     return generate_answer(query.prompt)
