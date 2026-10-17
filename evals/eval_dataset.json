@@ -1,0 +1,76 @@
+{
+  "samples": [
+    {
+      "user_input": "What is LiteParse?",
+      "reference": "LiteParse is a standalone OSS PDF parsing tool focused exclusively on fast and light parsing."
+    },
+    {
+      "user_input": "What is the parse speed per page using LiteParse?",
+      "reference": "LiteParse parses at an average of ~2-5ms per page."
+    },
+    {
+      "user_input": "What platforms are supported by LiteParse?",
+      "reference": "LiteParse supports Linux, macOS (Intel/ARM), and Windows."
+    },
+    {
+      "user_input": "What OCR engine does LiteParse use?",
+      "reference": "LiteParse uses the open source Tesseract OCR Engine, which requires zero setup and is bundled with the library."
+    },
+    {
+      "user_input": "How do you install LiteParse for python?",
+      "reference": "To install LiteParse for python, run the command `pip install liteparse` in your terminal."
+    },
+    {
+      "user_input": "What is the syntax for basic parsing with LiteParse?",
+      "reference": "For basic parsing with LiteParse, run the command: `lit parse document.pdf`."
+    },
+    {
+      "user_input": "What is the syntax for parsing without OCR with LiteParse?",
+      "reference": "To parse without OCR with LiteParse, run the command: `lit parse document.pdf --no-ocr`."
+    },
+    {
+      "user_input": "What languages does LiteParse currently support?",
+      "reference": "LiteParse currently supports Rust, Node.js/TypeScript, Python, or the browser (WASM)."
+    },
+    {
+      "user_input": "What tool does LiteParse use for spatial text parsing?",
+      "reference": "LiteParse uses PDFium for spatial text parsing."
+    },
+    {
+      "user_input": "All package versions except for what language ship wit the same `lit` CLI in LiteParse?",
+      "reference": "All versions except for WASM ship with the same lit CLI."
+    },
+    {
+      "user_input": "Can I use LiteParse as an agent skill?",
+      "reference": "Yes, you can use liteparse as an agent skill, downloading it with the skills CLI tool: `npx skills add run-llama/llamaparse-agent-skills --skill liteparse` or by copy-pasting the `SKILL.md` file to your own skills setup."
+    },
+    {
+      "user_input": "How are images handled by LiteParse?",
+      "reference": "In LiteParse, image handling is controlled by the `--image-mode option`."
+    },
+    {
+      "user_input": "Why is vector path output opt-in in LiteParse?",
+      "reference": "Vector path output is opt-in in LiteParse because path-heavy PDFs can produce large payloads."
+    },
+    {
+      "user_input": "What document entries do parse results in LiteParse carry if present?",
+      "reference": "Parse results (Rust/Node/Python APIs) carry the document's `/Info`, `creator` and `producer` entries when present; these are API-only and never appear in CLI JSON output."
+    },
+    {
+      "user_input": "How do you batch parse with LiteParse?",
+      "reference": "To parse an entire directory of documents with LiteParse, run the command: `lit batch-parse ./input-directory ./output-directory`."
+    },
+    {
+      "user_input": "How do I screenshot all pages with LiteParse?",
+      "reference": "To screenshot all pages with LiteParse, run the command: `lit screenshot document.pdf -o ./screenshots`."
+    },
+    {
+      "user_input": "What image formats does LiteParse natively support for automatic conversion to PDF before parsing?",
+      "reference": "LiteParse currently supports the following image formats: `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.tiff`, `.webp`, and `.svg`."
+    },
+    {
+      "user_input": "What license does LiteParse have?",
+      "reference": "LiteParse has an Apache 2.0 License."
+    }
+  ]
+}
