@@ -28,7 +28,7 @@ jobs:
           USERNAME: "user"
           TABLE_NAME: "embeddings"
           EMBED_DIM: "1536"
-          LLM_PROVIDER: "openai"
+          LLM_PROVIDER: "OpenAI"
           MODEL: "gpt-4o"
           OPENAI_API_KEY: "fake-key-for-testing"
           LLM_URL: "https://api.openai.com/v1"
