@@ -6,7 +6,7 @@ client = TestClient(app)
 
 def mock_query(mocker):
     mocker.patch(
-        "app.routers.query.generate_response",
+        "app.services.rag.generate_answer",
         return_value={
             "answer": "Mocked generated answer based on docs.",
             "contexts": ["Chunk 1", "Chunk 2"],
