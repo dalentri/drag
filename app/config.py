@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     username: str = "test_user"
     table_name: str = "test_table"
     embed_dim: int = 1536
-    llm_provider: str = "openai"
+    llm_provider: str = "OpenAI"
     model: str = "gpt-4o"
     openai_api_key: str = "test-openai-key"
     llm_url: str = "http://localhost:8000"
