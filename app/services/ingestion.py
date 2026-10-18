@@ -5,7 +5,7 @@ from llama_index.core.ingestion import IngestionPipeline
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-from app.database import storage_context
+from app.database import get_storage_context
 
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
@@ -30,6 +30,6 @@ def get_index():
     """Lazily initialize and return the vector store index."""
     global _index
     if _index is None:
-        _index = VectorStoreIndex(nodes=nodes, storage_context=storage_context)
+        _index = VectorStoreIndex(nodes=nodes, storage_context=get_storage_context())
         print(f"Successfully ingested and stored {len(nodes)} nodes into the database.")
     return _index
