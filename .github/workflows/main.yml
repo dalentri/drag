@@ -13,7 +13,23 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: uv sync --frozen
+        run: uv sync --frozen --reinstall
+        env:
+          UV_LINK_MODE: copy
 
       - name: Run pytest
         run: uv run pytest
+        env:
+          DATABASE_URL: "postgresql://user:password@localhost:5432/test_db"
+          DATABASE_NAME: "test_db"
+          HOST: "localhost"
+          PASSWORD: "password"
+          PORT: "5432"
+          USERNAME: "user"
+          TABLE_NAME: "embeddings"
+          EMBED_DIM: "1536"
+          LLM_PROVIDER: "openai"
+          MODEL: "gpt-4o"
+          OPENAI_API_KEY: "fake-key-for-testing"
+          LLM_URL: "https://api.openai.com/v1"
+          API_KEY: "fake-api-key"
