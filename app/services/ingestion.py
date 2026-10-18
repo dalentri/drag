@@ -1,11 +1,9 @@
 import pathlib as pl
 
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.core import Settings
-from llama_index.core import SimpleDirectoryReader
+from llama_index.core import Settings, SimpleDirectoryReader, VectorStoreIndex
 from llama_index.core.ingestion import IngestionPipeline
 from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core import VectorStoreIndex
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 from app.database import storage_context
 
@@ -25,6 +23,13 @@ pipeline = IngestionPipeline(
 
 nodes = pipeline.run(documents=docs)
 
-index = VectorStoreIndex(nodes=nodes, storage_context=storage_context)
+_index = None
 
-print(f"Successfully ingested and stored {len(nodes)} nodes into the database.")
+
+def get_index():
+    """Lazily initialize and return the vector store index."""
+    global _index
+    if _index is None:
+        _index = VectorStoreIndex(nodes=nodes, storage_context=storage_context)
+        print(f"Successfully ingested and stored {len(nodes)} nodes into the database.")
+    return _index

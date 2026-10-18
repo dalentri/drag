@@ -5,7 +5,7 @@ from llama_index.core import Settings
 from llama_index.llms.ollama import Ollama
 from llama_index.llms.openai import OpenAI
 
-from app.services.ingestion import index
+from app.services.ingestion import get_index
 from app.config import settings
 
 
@@ -18,7 +18,7 @@ def generate_answer(prompt: str):
     else:
         return {"Unknown provider. Please reconfigure provider in .env."}
 
-    retriever = VectorIndexRetriever(index=index, similarity_top_k=2)
+    retriever = VectorIndexRetriever(index=get_index(), similarity_top_k=2)
 
     response_synthesizer = get_response_synthesizer(response_mode="tree_summarize")
 
