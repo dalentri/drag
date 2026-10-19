@@ -10,6 +10,7 @@ dependencies = [
   "langchain-google-vertexai>=3.2.4",
   "llama-index>=0.14.25",
   "llama-index-embeddings-huggingface>=0.8.0",
+  "llama-index-llms-groq>=0.6.1",
   "llama-index-llms-ollama>=0.11.0",
   "llama-index-vector-stores-postgres>=0.9.0",
   "psycopg2-binary>=2.9.13",

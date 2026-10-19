@@ -825,6 +825,7 @@ dependencies = [
     { name = "langchain-google-vertexai" },
     { name = "llama-index" },
     { name = "llama-index-embeddings-huggingface" },
+    { name = "llama-index-llms-groq" },
     { name = "llama-index-llms-ollama" },
     { name = "llama-index-vector-stores-postgres" },
     { name = "psycopg2-binary" },
@@ -843,6 +844,7 @@ requires-dist = [
     { name = "langchain-google-vertexai", specifier = ">=3.2.4" },
     { name = "llama-index", specifier = ">=0.14.25" },
     { name = "llama-index-embeddings-huggingface", specifier = ">=0.8.0" },
+    { name = "llama-index-llms-groq", specifier = ">=0.6.1" },
     { name = "llama-index-llms-ollama", specifier = ">=0.11.0" },
     { name = "llama-index-vector-stores-postgres", specifier = ">=0.9.0" },
     { name = "psycopg2-binary", specifier = ">=2.9.13" },
@@ -2170,6 +2172,19 @@ wheels = [
 ]
 
 [[package]]
+name = "llama-index-llms-groq"
+version = "0.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llama-index-core" },
+    { name = "llama-index-llms-openai-like" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7b/07/9c4b1fe013c74e9812d8fb67f0f11c98a26f7dfae71cfd8f21f5ad2fa59c/llama_index_llms_groq-0.6.1.tar.gz", hash = "sha256:da7590a5caa1582c8bd35f585deab0876a8bf130e864f56abc698f0d4ba55d65", size = 4214, upload-time = "2026-08-31T16:30:18.583Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/47/6a/b1f9222d59c97a963e9c8d467154decbf8ef81ea1f434cdc4512f2b77a3b/llama_index_llms_groq-0.6.1-py3-none-any.whl", hash = "sha256:f2a62e2e25e045dc524349a1b55c213b7696de7f082f15acbd953dab1805d17f", size = 3693, upload-time = "2026-08-31T16:30:17.825Z" },
+]
+
+[[package]]
 name = "llama-index-llms-ollama"
 version = "0.11.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2193,6 +2208,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/74/6e/1ef83a852296c55fe8c529b4476073eccaff150d57aceb3d6319a87dcc89/llama_index_llms_openai-0.7.10.tar.gz", hash = "sha256:aa8dabf08ea0b9740fc9dae9677f05049254be5e929794a886692eaf26973def", size = 27586, upload-time = "2026-07-21T23:16:18.087Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8b/89/854cb7b2e5be3b3c16561e93f3edd52d8a1b6e031be1aca4519b9fdd3917/llama_index_llms_openai-0.7.10-py3-none-any.whl", hash = "sha256:b76a0c3d4aaa9aba57dc0366ca6b2346c6819bed22973e334676d7a34704e46a", size = 28673, upload-time = "2026-07-21T23:16:17.062Z" },
+]
+
+[[package]]
+name = "llama-index-llms-openai-like"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llama-index-core" },
+    { name = "llama-index-llms-openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0b/83/9695e5414b458e82b8baafdfec8f94dc1566cac712a171bcab4a03ca3a30/llama_index_llms_openai_like-0.8.0.tar.gz", hash = "sha256:459f115ca343c96252b9d123986056193a7d088f64f73c5336ce381e02c9d6d2", size = 5380, upload-time = "2026-08-31T15:57:21.75Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/56/59/21eb418402edef9f5d1b6e8632b26fd6ec35eae9705b70537a4b3ea341ef/llama_index_llms_openai_like-0.8.0-py3-none-any.whl", hash = "sha256:c629179cd5984439111337be1dd705b045d0e5f6cb3b7ea44a4b68a6c596c53a", size = 6603, upload-time = "2026-08-31T15:57:20.979Z" },
 ]
 
 [[package]]

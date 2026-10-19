@@ -4,6 +4,7 @@ from app.config import settings
 import os
 
 os.environ["OPENAI_API_KEY"] = settings.openai_api_key
+os.environ["GROQ_API_KEY"] = settings.groq_api_key
 
 
 app = FastAPI()

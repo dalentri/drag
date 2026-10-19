@@ -4,6 +4,7 @@ from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core import Settings
 from llama_index.llms.ollama import Ollama
 from llama_index.llms.openai import OpenAI
+from llama_index.llms.groq import Groq
 
 from app.services.ingestion import get_index
 from app.config import settings
@@ -15,6 +16,10 @@ def generate_answer(prompt: str):
         Settings.llm = Ollama(model=settings.model, request_timeout=120.0)
     elif settings.llm_provider == "OpenAI":
         Settings.llm = OpenAI(model=settings.model, request_timeout=120.0)
+    elif settings.llm_provider == "Groq":
+        Settings.llm = Groq(
+            model=settings.model, api_key=settings.groq_api_key, request_timeout=120.0
+        )
     else:
         return {"Unknown provider. Please reconfigure provider in .env."}
 
