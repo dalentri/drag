@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     llm_provider: str = "OpenAI"
     model: str = "gpt-4o"
     openai_api_key: str = "test-openai-key"
+    groq_api_key: str = "test-groq-key"
     llm_url: str = "http://localhost:8000"
     api_key: str = "test-api-key"
     model_config = SettingsConfigDict(
