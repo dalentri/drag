@@ -2,7 +2,7 @@ DRAG, a Document Search API
 
 A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for efficient document search and context-aware LLM responses.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** FastAPI
 - **Orchestration:** LlamaIndex
@@ -10,7 +10,9 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
 - **Dependency Management:** `uv`
 - **Hosting:** Render
 
----
+## Architecture
+
+![Architecture Diagram](./Media/diagram.png)
 
 ## Local Development & Setup
 
