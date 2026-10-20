@@ -38,7 +38,9 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
    MODEL=model_name
    ```
 
-4. **Run the development server:**
+4. **Add custom documents to `data/raw_docs` directory (optional)**
+
+5. **Run the development server:**
 
    ```bash
    uv run
