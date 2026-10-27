@@ -9,6 +9,7 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
 - **Database:** PostgreSQL with `pgvector` extension
 - **Dependency Management:** `uv`
 - **Hosting:** Render
+- **Tests**: Pytest
 
 ## Architecture
 
@@ -54,4 +55,14 @@ To then run the evaluations:
 
 ```bash
 PYTHONPATH=. uv run evals/run_evals.py
+```
+
+### Running Tests
+
+Drag comes equipped with unit tests for the API's functionality.
+
+To run tests with `Pytest`:
+
+```bash
+pytest tests/test_api.py
 ```
