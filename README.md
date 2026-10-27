@@ -8,7 +8,6 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
 - **Orchestration:** LlamaIndex
 - **Database:** PostgreSQL with `pgvector` extension
 - **Dependency Management:** `uv`
-- **Hosting:** Render
 - **Tests**: Pytest
 
 ## Architecture
