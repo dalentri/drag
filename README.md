@@ -1,4 +1,4 @@
-DRAG, a Document Search API
+# DRAG, a Document Search API
 
 A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for efficient document search and context-aware LLM responses.
 
