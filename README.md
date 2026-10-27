@@ -43,5 +43,9 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
 5. **Run the development server:**
 
    ```bash
-   uv run
+   uv run fastapi dev app/main.py
    ```
+
+### Running Evaluations
+
+To begin running evaluations, ensure that the api is running using the `uv run`
