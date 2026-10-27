@@ -12,15 +12,15 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
 
 ## Architecture
 
-![Architecture Diagram](./Media/diagram.png)
+![Architecture Diagram](./media/diagram.png)
 
 ## Local Development & Setup
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/dalentri/drag.git
+   cd drag
    ```
 
 2. **Install dependencies using `uv`:**
