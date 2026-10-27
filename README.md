@@ -48,4 +48,10 @@ A lightweight, cost-effective Retrieval-Augmented Generation (RAG) API built for
 
 ### Running Evaluations
 
-To begin running evaluations, ensure that the api is running using the `uv run`
+To begin running evaluations, ensure that the backend is running using the `uv run fastapi dev app/main.py` command.
+
+To then run the evaluations:
+
+```bash
+PYTHONPATH=. uv run evals/run_evals.py
+```
